@@ -13,37 +13,37 @@ const navConfig = [
   },
   {
     title: 'Verified Documents',
-    path: '/dashboard/user',
+    path: '/dashboard/verified-docs',
     icon: icon('ic_document'),
   },
   {
     title: 'Revoked Documents',
-    path: '/dashboard/user',
+    path: '/dashboard/revoked-docs',
     icon: icon('ic_revoked_docs'),
   },
   {
     title: 'Verification Requests',
-    path: '/dashboard/user',
+    path: '/dashboard/verification-requests',
     icon: icon('ic_request'),
   },
   {
     title: 'Known Validators',
-    path: '/dashboard/user',
+    path: '/dashboard/known-validators',
     icon: icon('ic_validators'),
   },
   {
     title: 'My KYC',
-    path: '/dashboard/user',
+    path: '/dashboard/my-kyc',
     icon: icon('ic_user'),
   },
   {
     title: 'Verifiers',
-    path: '/dashboard/user',
+    path: '/dashboard/verifiers',
     icon: icon('ic_verifiers'),
   },
   {
     title: 'Share KYC',
-    path: '/dashboard/user',
+    path: '/dashboard/share-kyc',
     icon: icon('ic_share'),
   },
   {

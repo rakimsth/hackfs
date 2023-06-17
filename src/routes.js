@@ -19,6 +19,13 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'user', element: <UserPage /> },
+        { path: 'verified-docs', element: <UserPage /> },
+        { path: 'revoked-docs', element: <UserPage /> },
+        { path: 'verification-requests', element: <UserPage /> },
+        { path: 'known-validators', element: <UserPage /> },
+        { path: 'my-kyc', element: <UserPage /> },
+        { path: 'verifiers', element: <UserPage /> },
+        { path: 'share-kyc', element: <UserPage /> },
       ],
     },
     {
