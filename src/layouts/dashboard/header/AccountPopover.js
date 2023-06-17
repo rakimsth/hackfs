@@ -38,9 +38,14 @@ export default function AccountPopover() {
 
   const handleClose = () => {
     setOpen(null);
+  };
+
+  const handleLogout = () => {
+    setOpen(null);
     logoutMetaMask();
     navigate('/login');
   };
+
   console.log('Page: AccountPopover.js', wallet, hasProvider);
   return (
     <>
@@ -104,7 +109,7 @@ export default function AccountPopover() {
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        <MenuItem onClick={handleClose} sx={{ m: 1 }}>
+        <MenuItem onClick={handleLogout} sx={{ m: 1 }}>
           Logout
         </MenuItem>
       </Popover>
