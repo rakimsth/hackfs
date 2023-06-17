@@ -78,7 +78,7 @@ export default function LoginPage() {
               {!hasProvider && (
                 <Alert severity="error">
                   <a href="https://metamask.io" target="_blank" rel="noreferrer">
-                    Install MetaMask
+                    | ChinoMetaMask
                   </a>
                 </Alert>
               )}
