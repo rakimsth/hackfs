@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
 // mocks_
 import account from '../../../_mock/account';
+// hooks
+import { useMetaMask } from '../../../hooks/useMetaMask';
 
 // ----------------------------------------------------------------------
 
@@ -25,6 +28,8 @@ const MENU_OPTIONS = [
 // ----------------------------------------------------------------------
 
 export default function AccountPopover() {
+  const navigate = useNavigate();
+  const { wallet, hasProvider, logoutMetaMask } = useMetaMask();
   const [open, setOpen] = useState(null);
 
   const handleOpen = (event) => {
@@ -33,8 +38,10 @@ export default function AccountPopover() {
 
   const handleClose = () => {
     setOpen(null);
+    logoutMetaMask();
+    navigate('/login');
   };
-
+  console.log('Page: AccountPopover.js', wallet, hasProvider);
   return (
     <>
       <IconButton

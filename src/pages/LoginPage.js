@@ -45,7 +45,6 @@ const StyledContent = styled('div')(({ theme }) => ({
 export default function LoginPage() {
   const mdUp = useResponsive('up', 'md');
   const { wallet, hasProvider, isConnecting, connectMetaMask, errorMessage } = useMetaMask();
-  console.log('========>', wallet);
   return (
     <>
       {wallet.accounts.length > 0 && <Navigate to="/" replace />}

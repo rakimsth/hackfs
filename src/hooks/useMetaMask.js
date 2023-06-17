@@ -83,6 +83,10 @@ export const MetaMaskContextProvider = ({ children }) => {
     setIsConnecting(false);
   };
 
+  const logoutMetaMask = async () => {
+    setIsConnecting(false);
+    setWallet(disconnectedState);
+  };
   return (
     <MetaMaskContext.Provider
       value={{
@@ -93,6 +97,7 @@ export const MetaMaskContextProvider = ({ children }) => {
         isConnecting,
         connectMetaMask,
         clearError,
+        logoutMetaMask,
       }}
     >
       {children}
